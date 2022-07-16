@@ -1,0 +1,25 @@
+:root {
+    box-sizing: border-box;
+}
+
+html,
+body,
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    height: 100vh;
+}
+
+.summary{
+    margin: 0 auto;
+    border:  3px solid blanchedalmond;
+    width: 400px; 
+    height: 400px;
+    text-align: center;
+}
+.title {
+    text-align: center;
+}
