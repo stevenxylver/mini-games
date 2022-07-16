@@ -17,12 +17,31 @@
             <h1 class="result"></h1>
         </div>
         <div class="games">
-                <div class="option">📃</div>
-                <div class="option">✂️</div>
-                <div class="option">🪨</div>
+                <div class="option" onclick="pickOption('📃')">📃</div>
+                <div class="option" onclick="pickOption('✂️')">✂️</div>
+                <div class="option" onclick="pickOption('🪨')">🪨</div>
             </div>
         </div>
 
+        <script>
+            class Start{
+            constructor(){
+                      this.playerName="Kamu";
+                      this.botName="Deabot";
+                      this.playerOption;
+                      this.winner=""
+            }
+
+            set playerOption(option) {
+                      this.playerOption = option;
+                 }
+                                           
+             function pickOption(params) {
+                 const start=new Start();
+                 start.playerOption=params
+                 console.log("Kamu memilih:",start.playerOption);
+             }
+                </script>
     </body>
 
     </html>
