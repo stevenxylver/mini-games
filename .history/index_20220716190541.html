@@ -86,21 +86,14 @@
         
 
     }
-
     function pickOption(params){
          const start= new Start();
          start.setPlayerOption = params;
          start.setBotOption = start.botBrain();
          start.winCalculation();
-
          console.log(`player: ${start.getPlayerOption} VS bot: ${start.getBotOption}`);
          console.log("hasil akhir: ", start.matchResult());
 
-         const inGame = document.getElementById("inGame");
-         const result = document.getElementById("result");
-
-        inGame.textContent = `${start.getPlayerOption} VS ${start.getBotOption}`
-        result.textContent = start.matchResult();
     }
     </script>
     </body>

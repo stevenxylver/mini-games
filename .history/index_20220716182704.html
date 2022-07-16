@@ -14,8 +14,7 @@
     <div id="app">
         <div class="summary">
             <h1 class="title">Match Result</h1>
-            <h1 id="inGame"></h1>
-            <h1 id="result"></h1>
+            <h1 class="result"></h1>
         </div>
         <div class="games">
                 <div class="option" onclick="pickOption('📃')">📃</div>
@@ -28,7 +27,7 @@
            
     class Start{
          constructor(){
-        this.playerName="player"
+        this.playerName="Kamu"
         this.botName="Deabot"
         this.playerOption;
         this.botOption;
@@ -75,32 +74,16 @@
             }
         }
         
-        matchResult(){
-            if (this.winner != "SERI") {
-                return `${this.winner} Menang!`;
-            } else{
-                return `WAA ${this.winner}, Gak ada yang menang `;
-            }
-        }
-        
         
 
     }
-
     function pickOption(params){
          const start= new Start();
          start.setPlayerOption = params;
          start.setBotOption = start.botBrain();
-         start.winCalculation();
-
-         console.log(`player: ${start.getPlayerOption} VS bot: ${start.getBotOption}`);
-         console.log("hasil akhir: ", start.matchResult());
-
-         const inGame = document.getElementById("inGame");
-         const result = document.getElementById("result");
-
-        inGame.textContent = `${start.getPlayerOption} VS ${start.getBotOption}`
-        result.textContent = start.matchResult();
+         
+         console.log("bot pilih", start.botOption)
+         console.log("player pilih ", start.playerOption)
     }
     </script>
     </body>
