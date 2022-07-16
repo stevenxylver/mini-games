@@ -38,7 +38,7 @@
             return this.botOption;
         }
 
-        set setBotOption(option) {
+        setBotOption(option) {
             this.botOption = option;
         }
 
@@ -60,10 +60,9 @@
     function pickOption(params){
          const start= new Start();
          start.setPlayerOption = params;
-         start.setBotOption = start.botBrain();
-         
-         console.log("bot pilih", start.botOption)
-         console.log("player pilih ", start.playerOption)
+    start.setBotOption = start.botBrain();
+    console.log("bot pilih", start.botOption)
+    console.log("player pilih ", start.playerOption)
     }
     </script>
     </body>

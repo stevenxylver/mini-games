@@ -38,7 +38,7 @@
             return this.botOption;
         }
 
-        set setBotOption(option) {
+        setBotOption(option) {
             this.botOption = option;
         }
 
@@ -52,18 +52,15 @@
 
          botBrain() {
             const option = ["📃","✂️","🪨"]
-            const bot = option[Math.floor(Math.random() *option.length)];
-            return bot;
+            const bot = option[Math,floor(Math.random() *option.length)];
+            console.log("bot pilih: ", bot.toString());
         }
 
     }
     function pickOption(params){
          const start= new Start();
-         start.setPlayerOption = params;
-         start.setBotOption = start.botBrain();
-         
-         console.log("bot pilih", start.botOption)
-         console.log("player pilih ", start.playerOption)
+         start.setPlayerOption=params;
+         console.log("Kamu memilih:",start.getPlayerOption);
     }
     </script>
     </body>

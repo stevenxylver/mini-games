@@ -27,43 +27,25 @@
            
     class Start{
          constructor(){
+        
         this.playerName="Kamu"
         this.botName="Deabot"
         this.playerOption;
-        this.botOption;
         this.winner=""
          }
-
-        get getBotOption(){
-            return this.botOption;
-        }
-
-        set setBotOption(option) {
-            this.botOption = option;
-        }
-
          get getPlayerOption(){
               return this.playerOption
          }
 
          set setPlayerOption(option){
               this.playerOption=option;
+
          }
-
-         botBrain() {
-            const option = ["📃","✂️","🪨"]
-            const bot = option[Math.floor(Math.random() *option.length)];
-            return bot;
         }
-
-    }
     function pickOption(params){
          const start= new Start();
-         start.setPlayerOption = params;
-         start.setBotOption = start.botBrain();
-         
-         console.log("bot pilih", start.botOption)
-         console.log("player pilih ", start.playerOption)
+         start.setPlayerOption=params;
+         console.log("Kamu memilih:",start.getPlayerOption);
     }
     </script>
     </body>
